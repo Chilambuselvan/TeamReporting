@@ -8,7 +8,6 @@
 #
 
 library(shinydashboard)
-
 # Define UI for application that draws a histogram
 dashboardPage(skin="yellow",
   dashboardHeader(title = "KTOC Team Reporting"),
@@ -32,7 +31,7 @@ dashboardPage(skin="yellow",
       #### Dashboard ########
       tabItem(tabName = "dashboard",
               fluidRow(
-                box(title = "Dashboard",width=12,status = "warning", solidHeader = TRUE,collapsible = FALSE,collapsed = FALSE,
+                box(title = "Dashboard",width=12,status = "warning", solidHeader = TRUE,collapsible = TRUE,collapsed = FALSE,
                     dataTableOutput("tabmissingSummary2"))
               )
       ),
@@ -43,7 +42,7 @@ dashboardPage(skin="yellow",
                   selectInput(inputId = "SelWeek","Week Selected",WeeksAvail,multiple = FALSE))
                       ),
               fluidRow(
-                box(title = "Weekly Analysis",width=12,status = "warning", solidHeader = TRUE,collapsible = FALSE,collapsed = FALSE,
+                box(title = "Weekly Analysis",width=12,status = "warning", solidHeader = TRUE,collapsible = TRUE,collapsed = TRUE,
                     dataTableOutput("tabWeeklyLoadTasks"))
               )
       ),
