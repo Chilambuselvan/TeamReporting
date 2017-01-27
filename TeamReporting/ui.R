@@ -32,7 +32,7 @@ dashboardPage(skin="yellow",
       tabItem(tabName = "dashboard",
               fluidRow(
                 box(title = "Dashboard",width=12,status = "warning", solidHeader = TRUE,collapsible = TRUE,collapsed = FALSE,
-                    dataTableOutput("tabmissingSummary2"))
+                    dataTableOutput("tabdashboard"))
               )
       ),
       #### Resource Analysis ########

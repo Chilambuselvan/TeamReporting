@@ -45,6 +45,15 @@ shinyServer(function(input, output) {
               colnames = c('STREAM', 'Name', 'Work Hours','Off Work Hours','No.Of Work Days','Efficiency'))
   })
   
+  output$tabdashboard = renderDataTable({
+    tabfilt=TasksCon%>%
+      filter(Week_x==input$SelWeek & Leave_Permission=="NOT APPLICABLE")%>%
+      group_by(Assigned_To_x,Platform)%>%
+      summarise(WorkHours=sum(HoursTaken_x,na.rm = TRUE))
+    
+    datatable(tabfilt,filter = "top")
+  })
+  
   #######################DataFrame_Summary################ tabmissingSummary
   output$tabmissingSummary = renderDataTable({
     missing.summary <- sapply(TasksCon, function(x) sum(is.na(x))) 
