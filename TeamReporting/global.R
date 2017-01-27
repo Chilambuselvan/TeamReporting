@@ -37,6 +37,10 @@ if (dir.exists("Y:/03_KTOC Team/00_GENERAL/04_KTOC Task Report"))
   setwd("Y:/03_KTOC Team/00_GENERAL/04_KTOC Task Report")
 }
 
+if (dir.exists("Z:/03_KTOC Team/00_GENERAL/04_KTOC Task Report"))
+{
+  setwd("z:/03_KTOC Team/00_GENERAL/04_KTOC Task Report")
+}
 
 
 
